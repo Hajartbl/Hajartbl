@@ -1,0 +1,33 @@
+# Declarative schema used to validate every record before it is loaded.
+# Kept in YAML so business rules can change without touching the code.
+table: sales_orders
+primary_key: order_id          # used for de-duplication + UPSERT
+columns:
+  order_id:
+    type: int
+    required: true
+  order_date:
+    type: date
+    required: true
+    format: "%Y-%m-%d"
+  product:
+    type: str
+    required: true
+    max_length: 60
+  category:
+    type: str
+    required: true
+    allowed: [Electronics, Home, Sports, Beauty, Grocery]
+  region:
+    type: str
+    required: true
+    allowed: [North, South, East, West]
+  quantity:
+    type: int
+    required: true
+    min: 1
+    max: 1000
+  unit_price:
+    type: float
+    required: true
+    min: 0.0

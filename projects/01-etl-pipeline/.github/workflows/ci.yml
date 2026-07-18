@@ -1,0 +1,24 @@
+name: etl-pipeline CI
+
+on:
+  push:
+    paths: ["projects/01-etl-pipeline/**"]
+  pull_request:
+    paths: ["projects/01-etl-pipeline/**"]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projects/01-etl-pipeline
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: Run tests
+        run: python -m pytest tests/ -q
+      - name: Performance gate (< 0.5s / 5000 rows)
+        run: python benchmark.py

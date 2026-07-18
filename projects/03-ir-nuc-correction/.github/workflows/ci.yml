@@ -1,0 +1,22 @@
+name: ir-nuc CI
+
+on:
+  push:
+    paths: ["projects/03-ir-nuc-correction/**"]
+  pull_request:
+    paths: ["projects/03-ir-nuc-correction/**"]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: projects/03-ir-nuc-correction
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: Run tests
+        run: python -m pytest tests/ -q

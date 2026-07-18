@@ -31,6 +31,16 @@ hajar = {
 - Je code en **Python, SQL et Café** ☕
 - Mon dashboard Power BI préféré ? Celui qui évite 10 réunions inutiles
 
+### 🗂️ Mes projets
+
+Trois projets techniques reproductibles et testés → [**voir le portfolio**](projects/)
+
+| Projet | Stack | Résultat clé |
+|--------|-------|--------------|
+| [Pipeline ETL multi-format](projects/01-etl-pipeline/) | Python · pandas · SQL · PyYAML · Docker | 5 000 lignes < 0,5 s, UPSERT idempotent |
+| [API de maintenance prédictive](projects/02-predictive-maintenance-api/) | scikit-learn · Flask · Docker | Random Forest R² ≈ 0,92, API REST |
+| [Correction radiométrique IR (NUC)](projects/03-ir-nuc-correction/) | NumPy · Newton · régression | Non-uniformité 71 % → 4,7 % |
+
 ### 💌 On collabore ?
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Let's_Connect-blue?style=for-the-badge&logo=linkedin)](https://linkedin.com/in/hajar-toubali)
