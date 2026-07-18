@@ -2,7 +2,7 @@
 Image-quality metrics for evaluating the correction.
 
 - PSNR: fidelity of the corrected temperature map vs. ground truth.
-- Non-uniformity (NU%): residual fixed-pattern noise on a uniform scene —
+- Non-uniformity (NU%): residual fixed-pattern noise on a uniform image —
   the spatial spread relative to the mean. Lower is better.
 
 BRISQUE (the no-reference perceptual metric used in the original challenge)

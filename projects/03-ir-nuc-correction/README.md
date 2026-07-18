@@ -19,7 +19,7 @@ calibrations sont manquantes**.
 | Restaurer la température de scène | ✅ PSNR **−21 dB → +23 dB** |
 | Gérer les pixels défectueux | ✅ détection robuste (MAD) + réparation |
 
-![Correction d'une scène IR](figures/scene_correction.png)
+![Correction d'une image IR](figures/image_correction.png)
 
 ## 🔬 Méthode
 
@@ -49,9 +49,9 @@ python -m pytest tests/ -q    # 6 tests (Newton exact, calibration, PSNR, MAD)
 ```
 Newton reconstruction of missing 30 °C calibration frame:
   PSNR 65.4 dB | RMSE 2.10 counts
-Scene correction (vs ground-truth temperature):
+Image correction (vs ground-truth temperature):
   PSNR raw -20.7 dB -> corrected 23.4 dB
-Non-uniformity on a uniform 35 °C scene:
+Non-uniformity on a uniform 35 °C image:
   NU raw 71.21% -> corrected 4.75% (15x reduction)
 ```
 

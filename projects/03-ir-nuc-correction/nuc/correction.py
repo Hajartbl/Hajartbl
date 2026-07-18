@@ -6,7 +6,7 @@ per pixel, the responsivity (gain) and offset by linear regression:
 
     raw = responsivity * T + offset
 
-Correcting a new frame then inverts that relation to recover scene temperature:
+Correcting a new frame then inverts that relation to recover image temperature:
 
     T_hat = (raw - offset) / responsivity
 

@@ -10,7 +10,7 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from nuc.newton import interpolate, divided_differences, newton_eval
 from nuc.correction import calibrate, correct, detect_bad_pixels
 from nuc.metrics import non_uniformity, psnr
-from nuc.simulate import IRSensor, make_test_scene
+from nuc.simulate import IRSensor, make_test_image
 
 CAL_TEMPS = np.array([10.0, 20.0, 30.0, 40.0, 50.0])
 
@@ -45,10 +45,10 @@ def test_correction_improves_psnr():
     frames = np.stack([sensor.capture_uniform(t) for t in CAL_TEMPS])
     resp, off = calibrate(CAL_TEMPS, frames)
     bad = detect_bad_pixels(resp, off)
-    scene = make_test_scene(sensor.shape)
-    raw = sensor.capture_scene(scene)
+    truth = make_test_image(sensor.shape)
+    raw = sensor.capture_image(truth)
     corrected = correct(raw, resp, off, bad)
-    assert psnr(scene, corrected) > psnr(scene, raw) + 10  # big improvement
+    assert psnr(truth, corrected) > psnr(truth, raw) + 10  # big improvement
 
 
 def test_non_uniformity_drops():
