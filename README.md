@@ -33,13 +33,14 @@ hajar = {
 
 ### 🗂️ Mes projets
 
-Trois projets techniques reproductibles et testés → [**voir le portfolio**](projects/)
+Quatre projets techniques reproductibles et testés → [**voir le portfolio**](projects/)
 
 | Projet | Stack | Résultat clé |
 |--------|-------|--------------|
 | [Pipeline ETL multi-format](projects/01-etl-pipeline/) | Python · pandas · SQL · PyYAML · Docker | 5 000 lignes < 0,5 s, UPSERT idempotent |
 | [API de maintenance prédictive](projects/02-predictive-maintenance-api/) | scikit-learn · Flask · Docker | Random Forest R² ≈ 0,92, API REST |
 | [Correction radiométrique IR (NUC)](projects/03-ir-nuc-correction/) | NumPy · Newton · régression | Non-uniformité 71 % → 4,7 % |
+| [Musique & Dépression](projects/04-music-and-depression/) | pandas · SciPy · scikit-learn | Tests statistiques, lien en U écoute↔dépression |
 
 ### 💌 On collabore ?
 
