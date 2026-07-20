@@ -1,6 +1,6 @@
 # Hey ! 👋 Je suis Hajar
 
-## 📊 Data Analyst | 🐍 Python Lover | 📈 BI Enthusiast
+## 📊 Data Analyst |
 
 > **Je transforme des tableaux Excel chaotiques en insights qui changent la donne.**
 
