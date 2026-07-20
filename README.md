@@ -1,6 +1,6 @@
 # Hey ! 👋 Je suis Hajar
 
-## 📊 Data Analyst |
+## 📊 Data Analyst |Cognitive Science Approach
 
 > **Je transforme des tableaux Excel chaotiques en insights qui changent la donne.**
 
